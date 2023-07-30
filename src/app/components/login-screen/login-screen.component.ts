@@ -86,6 +86,7 @@ export class LoginScreenComponent implements OnInit {
         )
         .subscribe((otp: string) => {
           console.log(otp);
+          localStorage.setItem("usermail", JSON.stringify(email));
           this.router.navigate(['/userScreen']);
         });
     } catch (error) {
